@@ -31,11 +31,12 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.60.0",
+    "@aws-cdk/assert": "^1.32.2",
     "@types/jest": "^26.0.7",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.19.2",
+    "aws-sdk": "^2.708.0",
     "eslint": "^6.8.0",
     "eslint-import-resolver-node": "^0.3.3",
     "eslint-import-resolver-typescript": "^2.0.0",
@@ -53,9 +54,20 @@
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
+    "@aws-cdk/aws-dynamodb": "^1.32.2",
+    "@aws-cdk/aws-lambda": "^1.32.2",
+    "@aws-cdk/aws-lambda-event-sources": "^1.32.2",
+    "@aws-cdk/aws-sqs": "^1.32.2",
+    "@aws-cdk/core": "^1.32.2",
     "constructs": "^3.0.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@aws-cdk/aws-dynamodb": "^1.32.2",
+    "@aws-cdk/aws-lambda": "^1.32.2",
+    "@aws-cdk/aws-lambda-event-sources": "^1.32.2",
+    "@aws-cdk/aws-sqs": "^1.32.2",
+    "@aws-cdk/core": "^1.32.2"
+  },
   "bundledDependencies": [],
   "keywords": [
     "cdk"
