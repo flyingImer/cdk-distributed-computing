@@ -12,6 +12,7 @@ const project = new ConstructLibraryAws({
   cdkVersion: '1.32.2',
   cdkDependencies: [
     '@aws-cdk/aws-dynamodb',
+    '@aws-cdk/aws-iam',
     '@aws-cdk/aws-lambda',
     '@aws-cdk/aws-lambda-event-sources',
     '@aws-cdk/aws-sqs',
@@ -19,10 +20,13 @@ const project = new ConstructLibraryAws({
   ],
 
   devDependencies: {
-    "aws-sdk": Semver.caret("2.708.0")
+    'aws-sdk': Semver.caret('2.708.0'),
+    '@types/lodash': Semver.caret('4.14.161'),
   }
 });
 
 project.gitignore.exclude('.env');
+project.gitignore.include('example/tsconfig.json');
+project.gitignore.exclude('example/*.js', 'example/*.d.ts', 'example/cdk.out', 'example/lambda/*.js', 'example/lambda/*.d.ts');
 
 project.synth();

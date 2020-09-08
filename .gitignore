@@ -41,6 +41,11 @@ jspm_packages/
 .jsii
 tsconfig.json
 .env
+example/*.js
+example/*.d.ts
+example/cdk.out
+example/lambda/*.js
+example/lambda/*.d.ts
 !/package.json
 !/.npmignore
 !/LICENSE
@@ -56,3 +61,4 @@ tsconfig.json
 !/tsconfig.jest.json
 !/test
 !/API.md
+!example/tsconfig.json
