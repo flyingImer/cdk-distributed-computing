@@ -2,6 +2,7 @@ const { ConstructLibraryAws, Stability, Semver } = require('projen');
 
 const project = new ConstructLibraryAws({
   name: 'cdk-distributed-computing',
+  description: 'A place holds distributed patterns using serverless power',
 
   stability: Stability.Experimental,
 
@@ -20,8 +21,7 @@ const project = new ConstructLibraryAws({
   ],
 
   devDependencies: {
-    'aws-sdk': Semver.caret('2.708.0'),
-    '@types/lodash': Semver.caret('4.14.161'),
+    'aws-sdk': Semver.caret('2.708.0')
   }
 });
 

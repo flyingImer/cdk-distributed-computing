@@ -50,6 +50,7 @@ Name | Type | Description
 **taskPipe** | <code>[Queue](#aws-cdk-aws-sqs-queue)</code> | <span></span>
 **taskPipeUrl** | <code>string</code> | <span></span>
 **worker** | <code>[Function](#aws-cdk-aws-lambda-function)</code> | <span></span>
+**taskPipeDLQ**? | <code>[DeadLetterQueue](#aws-cdk-aws-sqs-deadletterqueue)</code> | __*Optional*__
 
 ### Methods
 
@@ -98,8 +99,7 @@ Name | Type | Description
 
 Name | Type | Description 
 -----|------|-------------
-**maxReceiveCount** | <code>number</code> | The number of times a message can be unsuccesfully dequeued before being moved to the dead-letter queue.
-**queue** | <code>[IQueue](#aws-cdk-aws-sqs-iqueue)</code> | The dead-letter queue to which Amazon SQS moves messages after the value of maxReceiveCount is exceeded.
+**deadLetterQueue**? | <code>[DeadLetterQueue](#aws-cdk-aws-sqs-deadletterqueue)</code> | __*Default*__: SQS queue with 14 day retention period, allowing 2 unsuccessful dequeues before being moved to this dead-letter queue.
 **enabled**? | <code>boolean</code> | __*Default*__: true.
 
 

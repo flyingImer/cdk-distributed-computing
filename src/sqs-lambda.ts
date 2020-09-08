@@ -26,16 +26,21 @@ export interface FanOutToLambdasViaQueueProps {
   readonly taskPipeVisibilityTimeout?: Duration;
 }
 
-export interface TaskPipeDeadLetterQueueConfig extends sqs.DeadLetterQueue {
+export interface TaskPipeDeadLetterQueueConfig {
   /**
    * @default - true.
    */
   readonly enabled?: boolean;
+  /**
+   * @default - SQS queue with 14 day retention period, allowing 2 unsuccessful dequeues before being moved to this dead-letter queue.
+   */
+  readonly deadLetterQueue?: sqs.DeadLetterQueue;
 }
 
 export class FanOutToLambdasViaQueue extends Construct {
   public readonly taskPipe: sqs.Queue;
   public readonly worker: lambda.Function;
+  private readonly _taskPipeDLQ?: sqs.DeadLetterQueue;
 
   constructor(scope: Construct, id: string, props: FanOutToLambdasViaQueueProps) {
     super(scope, id);
@@ -44,8 +49,10 @@ export class FanOutToLambdasViaQueue extends Construct {
       ...props.workerFunctionProps,
     });
 
+    this._taskPipeDLQ = this.determineDeadLetterQueueProps(props);
+
     this.taskPipe = new sqs.Queue(this, 'TaskPipe', {
-      deadLetterQueue: this.determineDeadLetterQueueProps(props),
+      deadLetterQueue: this._taskPipeDLQ,
       visibilityTimeout: props.workerFunctionProps.timeout,
     });
     this.taskPipe.grantConsumeMessages(this.worker);
@@ -71,16 +78,20 @@ export class FanOutToLambdasViaQueue extends Construct {
     return this.taskPipe.queueUrl;
   }
 
-  private determineDeadLetterQueueProps(props: FanOutToLambdasViaQueueProps) {
+  public get taskPipeDLQ(): sqs.DeadLetterQueue | undefined {
+    return this._taskPipeDLQ;
+  }
+
+  private determineDeadLetterQueueProps(props: FanOutToLambdasViaQueueProps): sqs.DeadLetterQueue | undefined {
     // explicitly opt-out
     if (props.taskPipeDeadLetterQueueConfig?.enabled === false) {
       return undefined;
     }
 
-    const deadLetterQueue = props.taskPipeDeadLetterQueueConfig?.queue || new sqs.Queue(this, 'DeadLetterQueue', {
+    const deadLetterQueue = props.taskPipeDeadLetterQueueConfig?.deadLetterQueue?.queue || new sqs.Queue(this, 'DeadLetterQueue', {
       retentionPeriod: Duration.days(14),
     });
-    const maxReceiveCount = props.taskPipeDeadLetterQueueConfig?.maxReceiveCount || 2;
+    const maxReceiveCount = props.taskPipeDeadLetterQueueConfig?.deadLetterQueue?.maxReceiveCount || 2;
 
     return {
       queue: deadLetterQueue,
