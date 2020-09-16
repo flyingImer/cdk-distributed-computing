@@ -17,8 +17,8 @@ const CDK_DEPENDENCIES = [
 }, {});
 
 const project = new ConstructLibrary({
-  name: `cdk-distributed-computing-${CDK_PINNED_VERSION.version.replace(/\./g, '-')}`,
-  description: `A place holds distributed patterns using serverless power (targeting cdk v${CDK_PINNED_VERSION.version})`,
+  name: 'cdk-distributed-computing',
+  description: 'A place holds distributed patterns using serverless power',
 
   stability: Stability.Experimental,
 
@@ -50,6 +50,6 @@ project.gitignore.exclude('.env');
 project.gitignore.include('example/tsconfig.json');
 project.gitignore.exclude('example/*.js', 'example/*.d.ts', 'example/cdk.out', 'example/lambda/*.js', 'example/lambda/*.d.ts');
 
-project.addScript('bump', 'yarn --silent no-changes || standard-version release --prerelease cdk1.32.2');
+project.addScript('bump', `yarn --silent no-changes || standard-version release --prerelease cdk${CDK_PINNED_VERSION.version}`);
 
 project.synth();
