@@ -12,7 +12,7 @@
     "start": "npx projen start",
     "projen": "node .projenrc.js",
     "no-changes": "(git log --oneline -1 | grep -q \"chore(release):\") && echo \"No changes to release.\"",
-    "bump": "yarn --silent no-changes || standard-version --prerelease cdk1.32.2",
+    "bump": "yarn --silent no-changes || standard-version && standard-version --prerelease cdk1.32.2",
     "release": "yarn --silent no-changes || (yarn bump && git push --follow-tags origin master)",
     "projen:upgrade": "yarn upgrade -L projen && CI=\"\" yarn projen",
     "package": "jsii-pacmak",

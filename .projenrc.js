@@ -50,6 +50,6 @@ project.gitignore.exclude('.env');
 project.gitignore.include('example/tsconfig.json');
 project.gitignore.exclude('example/*.js', 'example/*.d.ts', 'example/cdk.out', 'example/lambda/*.js', 'example/lambda/*.d.ts');
 
-project.addScript('bump', `yarn --silent no-changes || standard-version --prerelease cdk${CDK_PINNED_VERSION.version}`);
+project.addScript('bump', `yarn --silent no-changes || standard-version && standard-version --prerelease cdk${CDK_PINNED_VERSION.version}`);
 
 project.synth();
