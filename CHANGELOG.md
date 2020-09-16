@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4-cdk1.32.2.0](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.1.3-cdk1.32.2.0...v0.1.4-cdk1.32.2.0) (2020-09-16)
+
+
+### Bug Fixes
+
+* revert the cdk version in the npm package name ([5768bbe](https://github.com/flyingImer/cdk-distributed-computing/commit/5768bbe7b2bc0925959140dc63860023f83e80a1))
+* try standard-version config ([1e2c86f](https://github.com/flyingImer/cdk-distributed-computing/commit/1e2c86f0e84bf8465f97a8b4768d880b74b03bdb))
+
 ### [0.1.3-cdk1.32.2.0](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.1.3-1.32.2.0...v0.1.3-cdk1.32.2.0) (2020-09-16)
 
 ### [0.1.3-1.32.2.0](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.1.2...v0.1.3-1.32.2.0) (2020-09-16)
