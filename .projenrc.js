@@ -30,6 +30,8 @@ const project = new ConstructLibrary({
     `pinned-${CDK_PINNED_VERSION.version}`
   ],
 
+  npmDistTag: `cdk${CDK_PINNED_VERSION.version}`,
+
   peerDependencies: { 
     ...CDK_DEPENDENCIES,
     ...CONSTRUCTS_DEPENDENCY,
