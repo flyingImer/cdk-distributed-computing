@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.2.5-cdk1.45.0.0 (2020-09-16)
+
 ### [0.2.5-cdk1.45.0.0](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.2.4...v0.2.5-cdk1.45.0.0) (2020-09-16)
 
 ### [0.2.4](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.2.2-cdk1.45.0.0...v0.2.4) (2020-09-16)
