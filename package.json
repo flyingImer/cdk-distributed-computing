@@ -12,7 +12,7 @@
     "start": "npx projen start",
     "projen": "node .projenrc.js",
     "no-changes": "(git log --oneline -1 | grep -q \"chore(release):\") && echo \"No changes to release.\"",
-    "bump": "yarn --silent no-changes || standard-version && standard-version --prerelease cdk1.32.2",
+    "bump": "yarn --silent no-changes || standard-version && standard-version --prerelease cdk1.45.0",
     "release": "yarn --silent no-changes || (yarn bump && git push --follow-tags origin master)",
     "projen:upgrade": "yarn upgrade -L projen && CI=\"\" yarn projen",
     "package": "jsii-pacmak",
@@ -32,7 +32,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.32.2",
+    "@aws-cdk/assert": "1.45.0",
     "@types/jest": "^26.0.7",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
@@ -55,21 +55,21 @@
     "typescript": "^3.9.5"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-dynamodb": "1.32.2",
-    "@aws-cdk/aws-iam": "1.32.2",
-    "@aws-cdk/aws-lambda": "1.32.2",
-    "@aws-cdk/aws-lambda-event-sources": "1.32.2",
-    "@aws-cdk/aws-sqs": "1.32.2",
-    "@aws-cdk/core": "1.32.2",
-    "constructs": "^2.0.0"
+    "@aws-cdk/aws-dynamodb": "1.45.0",
+    "@aws-cdk/aws-iam": "1.45.0",
+    "@aws-cdk/aws-lambda": "1.45.0",
+    "@aws-cdk/aws-lambda-event-sources": "1.45.0",
+    "@aws-cdk/aws-sqs": "1.45.0",
+    "@aws-cdk/core": "1.45.0",
+    "constructs": "^3.0.2"
   },
   "dependencies": {
-    "@aws-cdk/aws-dynamodb": "1.32.2",
-    "@aws-cdk/aws-iam": "1.32.2",
-    "@aws-cdk/aws-lambda": "1.32.2",
-    "@aws-cdk/aws-lambda-event-sources": "1.32.2",
-    "@aws-cdk/aws-sqs": "1.32.2",
-    "@aws-cdk/core": "1.32.2"
+    "@aws-cdk/aws-dynamodb": "1.45.0",
+    "@aws-cdk/aws-iam": "1.45.0",
+    "@aws-cdk/aws-lambda": "1.45.0",
+    "@aws-cdk/aws-lambda-event-sources": "1.45.0",
+    "@aws-cdk/aws-sqs": "1.45.0",
+    "@aws-cdk/core": "1.45.0"
   },
   "bundledDependencies": [],
   "keywords": [
@@ -133,7 +133,7 @@
       "category": 2
     }
   },
-  "version": "0.1.6-cdk1.32.2.0",
+  "version": "0.2.0",
   "types": "lib/index.d.ts",
   "jest": {
     "clearMocks": true,

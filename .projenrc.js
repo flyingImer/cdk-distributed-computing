@@ -1,9 +1,9 @@
 const { ConstructLibrary, Stability, Semver } = require('projen');
 
 const CONSTRUCTS_DEPENDENCY = {
-  'constructs': Semver.caret('2.0.0')
+  'constructs': Semver.caret('3.0.2')
 }
-const CDK_PINNED_VERSION = Semver.pinned('1.32.2');
+const CDK_PINNED_VERSION = Semver.pinned('1.45.0');
 const CDK_DEPENDENCIES = [
   '@aws-cdk/aws-dynamodb',
   '@aws-cdk/aws-iam',
@@ -27,8 +27,7 @@ const project = new ConstructLibrary({
   repository: 'https://github.com/flyingImer/cdk-distributed-computing.git',
 
   releaseBranches: [
-    'master',
-    'pinned-1.32.2'
+    `pinned-${CDK_PINNED_VERSION.version}`
   ],
 
   peerDependencies: { 
