@@ -26,6 +26,11 @@ const project = new ConstructLibrary({
   authorEmail: 'ej.wang.dev@gmail.com',
   repository: 'https://github.com/flyingImer/cdk-distributed-computing.git',
 
+  releaseBranches: [
+    'master',
+    'pinned-1.32.2'
+  ],
+
   peerDependencies: { 
     ...CDK_DEPENDENCIES,
     ...CONSTRUCTS_DEPENDENCY,

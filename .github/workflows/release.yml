@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - pinned-1.32.2
   workflow_dispatch: {}
 jobs:
   build:
