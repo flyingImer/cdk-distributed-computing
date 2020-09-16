@@ -4,19 +4,19 @@
 
 Name|Description
 ----|-----------
-[FanOutToLambdasViaQueue](#cdk-distributed-computing-fanouttolambdasviaqueue)|*No description*
+[FanOutToLambdasViaQueue](#cdk-distributed-computing-1-32-2-fanouttolambdasviaqueue)|*No description*
 
 
 **Structs**
 
 Name|Description
 ----|-----------
-[FanOutToLambdasViaQueueProps](#cdk-distributed-computing-fanouttolambdasviaqueueprops)|*No description*
-[TaskPipeDeadLetterQueueConfig](#cdk-distributed-computing-taskpipedeadletterqueueconfig)|*No description*
+[FanOutToLambdasViaQueueProps](#cdk-distributed-computing-1-32-2-fanouttolambdasviaqueueprops)|*No description*
+[TaskPipeDeadLetterQueueConfig](#cdk-distributed-computing-1-32-2-taskpipedeadletterqueueconfig)|*No description*
 
 
 
-## class FanOutToLambdasViaQueue  <a id="cdk-distributed-computing-fanouttolambdasviaqueue"></a>
+## class FanOutToLambdasViaQueue  <a id="cdk-distributed-computing-1-32-2-fanouttolambdasviaqueue"></a>
 
 
 
@@ -34,10 +34,10 @@ new FanOutToLambdasViaQueue(scope: Construct, id: string, props: FanOutToLambdas
 
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
-* **props** (<code>[FanOutToLambdasViaQueueProps](#cdk-distributed-computing-fanouttolambdasviaqueueprops)</code>)  *No description*
+* **props** (<code>[FanOutToLambdasViaQueueProps](#cdk-distributed-computing-1-32-2-fanouttolambdasviaqueueprops)</code>)  *No description*
   * **workerFunctionProps** (<code>[FunctionProps](#aws-cdk-aws-lambda-functionprops)</code>)  *No description* 
   * **batchSize** (<code>number</code>)  A knob to tweak how many messages a work can take at a time. __*Default*__: 1.
-  * **taskPipeDeadLetterQueueConfig** (<code>[TaskPipeDeadLetterQueueConfig](#cdk-distributed-computing-taskpipedeadletterqueueconfig)</code>)  *No description* __*Default*__: SQS queue with 14 day retention period, allowing 2 unsuccessful dequeues before being moved to this dead-letter queue.
+  * **taskPipeDeadLetterQueueConfig** (<code>[TaskPipeDeadLetterQueueConfig](#cdk-distributed-computing-1-32-2-taskpipedeadletterqueueconfig)</code>)  *No description* __*Default*__: SQS queue with 14 day retention period, allowing 2 unsuccessful dequeues before being moved to this dead-letter queue.
   * **taskPipeVisibilityTimeout** (<code>[Duration](#aws-cdk-core-duration)</code>)  Note that this number should not be less than Worker Function timeout. __*Default*__: same as Worker Function timeout.
 
 
@@ -55,7 +55,7 @@ Name | Type | Description
 ### Methods
 
 
-#### grantSendMessages(grantee) <a id="cdk-distributed-computing-fanouttolambdasviaqueue-grantsendmessages"></a>
+#### grantSendMessages(grantee) <a id="cdk-distributed-computing-1-32-2-fanouttolambdasviaqueue-grantsendmessages"></a>
 
 Helper method to grant access to send messages to a queue to the given identity.
 
@@ -74,7 +74,7 @@ __Returns__:
 
 
 
-## struct FanOutToLambdasViaQueueProps  <a id="cdk-distributed-computing-fanouttolambdasviaqueueprops"></a>
+## struct FanOutToLambdasViaQueueProps  <a id="cdk-distributed-computing-1-32-2-fanouttolambdasviaqueueprops"></a>
 
 
 
@@ -85,12 +85,12 @@ Name | Type | Description
 -----|------|-------------
 **workerFunctionProps** | <code>[FunctionProps](#aws-cdk-aws-lambda-functionprops)</code> | <span></span>
 **batchSize**? | <code>number</code> | A knob to tweak how many messages a work can take at a time.<br/>__*Default*__: 1.
-**taskPipeDeadLetterQueueConfig**? | <code>[TaskPipeDeadLetterQueueConfig](#cdk-distributed-computing-taskpipedeadletterqueueconfig)</code> | __*Default*__: SQS queue with 14 day retention period, allowing 2 unsuccessful dequeues before being moved to this dead-letter queue.
+**taskPipeDeadLetterQueueConfig**? | <code>[TaskPipeDeadLetterQueueConfig](#cdk-distributed-computing-1-32-2-taskpipedeadletterqueueconfig)</code> | __*Default*__: SQS queue with 14 day retention period, allowing 2 unsuccessful dequeues before being moved to this dead-letter queue.
 **taskPipeVisibilityTimeout**? | <code>[Duration](#aws-cdk-core-duration)</code> | Note that this number should not be less than Worker Function timeout.<br/>__*Default*__: same as Worker Function timeout.
 
 
 
-## struct TaskPipeDeadLetterQueueConfig  <a id="cdk-distributed-computing-taskpipedeadletterqueueconfig"></a>
+## struct TaskPipeDeadLetterQueueConfig  <a id="cdk-distributed-computing-1-32-2-taskpipedeadletterqueueconfig"></a>
 
 
 
