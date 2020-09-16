@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.1.5-cdk1.32.2.0...v0.1.5) (2020-09-16)
+
+
+### Bug Fixes
+
+* new standard-version config (bump up patch version as well as a prerelease name) ([dee78b5](https://github.com/flyingImer/cdk-distributed-computing/commit/dee78b5f41fbd4abec6393073b27c84eba1d2e27))
+* new standard-version config (new minor version + a prerelease name) ([f153ac8](https://github.com/flyingImer/cdk-distributed-computing/commit/f153ac8f438284c3b468422213ac8fe4be302cd8))
+
 ### [0.1.5-cdk1.32.2.0](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.1.4...v0.1.5-cdk1.32.2.0) (2020-09-16)
 
 ### [0.1.4](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.1.4-cdk1.32.2.0...v0.1.4) (2020-09-16)
