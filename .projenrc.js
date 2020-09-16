@@ -27,9 +27,10 @@ const project = new ConstructLibrary({
   repository: 'https://github.com/flyingImer/cdk-distributed-computing.git',
 
   releaseBranches: [
-    'master',
-    'pinned-1.32.2'
+    `pinned-${CDK_PINNED_VERSION.version}`
   ],
+
+  npmDistTag: `cdk${CDK_PINNED_VERSION.version}`,
 
   peerDependencies: { 
     ...CDK_DEPENDENCIES,
