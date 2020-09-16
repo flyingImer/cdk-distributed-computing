@@ -7,6 +7,9 @@
 
 > A place holds distributed patterns using serverless power
 
+## Warning
+Please use minor version 6 or above (>= 0.6.x) for the latest and greatest. Reserving minor versions below for testing with pinned cdk versions e.g. (0.2.x) for cdk v1.45.0 and minor version 1 (0.1.x) for cdk v1.32.2
+
 ## Install
 
 TypeScript/JavaScript:
