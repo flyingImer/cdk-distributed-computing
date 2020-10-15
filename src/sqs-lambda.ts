@@ -1,14 +1,14 @@
-import { Construct, Duration } from '@aws-cdk/core';
+import * as iam from '@aws-cdk/aws-iam';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as sources from '@aws-cdk/aws-lambda-event-sources';
 import * as sqs from '@aws-cdk/aws-sqs';
-import * as iam from '@aws-cdk/aws-iam';
+import { Construct, Duration } from '@aws-cdk/core';
 
 export interface FanOutToLambdasViaQueueProps {
   readonly workerFunctionProps: lambda.FunctionProps;
   /**
    * A knob to tweak how many messages a work can take at a time.
-   * 
+   *
    * @default - 1.
    */
   readonly batchSize?: number;
@@ -20,7 +20,7 @@ export interface FanOutToLambdasViaQueueProps {
 
   /**
    * Note that this number should not be less than Worker Function timeout.
-   * 
+   *
    * @default - same as Worker Function timeout.
    */
   readonly taskPipeVisibilityTimeout?: Duration;
@@ -65,7 +65,7 @@ export class FanOutToLambdasViaQueue extends Construct {
   /**
    * Helper method to grant access to send messages to a queue to the given identity.
    * Under the hood, it simply calls the corresponding SQS api.
-   * 
+   *
    * If you need more control, feel free to operate directly against the queue object.
    *
    * @param grantee Principal to grant send rights to

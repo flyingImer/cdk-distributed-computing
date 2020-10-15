@@ -1,6 +1,6 @@
-const { ConstructLibraryAws, Stability, Semver } = require('projen');
+const { AwsCdkConstructLibrary, Stability, Semver } = require('projen');
 
-const project = new ConstructLibraryAws({
+const project = new AwsCdkConstructLibrary({
   name: 'cdk-distributed-computing',
   description: 'A place holds distributed patterns using serverless power',
 
@@ -9,6 +9,9 @@ const project = new ConstructLibraryAws({
   authorName: 'Ej Wang',
   authorEmail: 'ej.wang.dev@gmail.com',
   repository: 'https://github.com/flyingImer/cdk-distributed-computing.git',
+
+  compat: true,
+  projenUpgradeSecret: 'PROJEN_UPGRADE_TOKEN',
 
   cdkVersion: '1.32.2',
   cdkDependencies: [
