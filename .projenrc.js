@@ -10,6 +10,10 @@ const project = new AwsCdkConstructLibrary({
   authorEmail: 'ej.wang.dev@gmail.com',
   repository: 'https://github.com/flyingImer/cdk-distributed-computing.git',
 
+  catalog: {
+    announce: false,
+  },
+
   compat: true,
   projenUpgradeSecret: 'PROJEN_UPGRADE_TOKEN',
 
