@@ -57,8 +57,8 @@ example/lambda/*.d.ts
 !/.mergify.yml
 !/.github/dependabot.yml
 !/src
-!/.eslintrc.json
 !/tsconfig.jest.json
 !/test
+!/.eslintrc.json
 !/API.md
 !example/tsconfig.json
