@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.6.8 (2020-10-16)
+
+
+### Bug Fixes
+
+* **package.json:** no new line at the end ([5d8b8f9](https://github.com/flyingImer/cdk-distributed-computing/commit/5d8b8f963060248aabedbceb1cd2dc14ca14c411))
+
 ### 0.6.7 (2020-10-16)
 
 ### 0.6.6 (2020-10-16)
