@@ -1,10 +1,12 @@
 const { AwsCdkConstructLibrary, Stability, Semver } = require('projen');
 
+const CDK_VERSION = '1.69.0';
+
 const project = new AwsCdkConstructLibrary({
   name: 'cdk-distributed-computing',
   description: 'A place holds distributed patterns using serverless power',
 
-  stability: Stability.Experimental,
+  stability: 'experimental',
 
   authorName: 'Ej Wang',
   authorEmail: 'ej.wang.dev@gmail.com',
@@ -17,18 +19,19 @@ const project = new AwsCdkConstructLibrary({
   compat: true,
   projenUpgradeSecret: 'PROJEN_UPGRADE_TOKEN',
 
-  cdkVersion: '1.32.2',
-  cdkDependencies: [
-    '@aws-cdk/aws-dynamodb',
-    '@aws-cdk/aws-iam',
-    '@aws-cdk/aws-lambda',
-    '@aws-cdk/aws-lambda-event-sources',
-    '@aws-cdk/aws-sqs',
-    "@aws-cdk/core"
-  ],
+  cdkVersion: CDK_VERSION,
+  cdkAssert: false,
 
   devDependencies: {
-    'aws-sdk': Semver.caret('2.708.0')
+    'aws-sdk': Semver.caret('2.708.0'),
+    'monocdk': Semver.pinned(CDK_VERSION),
+    '@monocdk-experiment/assert': Semver.pinned(CDK_VERSION),
+    'constructs': Semver.pinned('3.0.4'),
+  },
+
+  peerDependencies: {
+    'monocdk': Semver.caret(CDK_VERSION),
+    'constructs': Semver.caret('3.0.4'),
   }
 });
 

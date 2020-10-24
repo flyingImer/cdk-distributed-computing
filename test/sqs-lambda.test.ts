@@ -1,8 +1,8 @@
 import * as path from 'path';
-import { expect as cdk_expect, haveResource, countResources } from '@aws-cdk/assert';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as sqs from '@aws-cdk/aws-sqs';
-import { Stack, Duration } from '@aws-cdk/core';
+import { expect as cdk_expect, haveResource, countResources } from '@monocdk-experiment/assert';
+import { Stack, Duration } from 'monocdk';
+import * as lambda from 'monocdk/aws-lambda';
+import * as sqs from 'monocdk/aws-sqs';
 import { FanOutToLambdasViaQueue } from '../src';
 
 test('creates a SQS queue (task pipe) and a Lambda Function (worker) with default settings', () => {

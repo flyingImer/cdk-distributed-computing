@@ -1,8 +1,8 @@
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as sources from '@aws-cdk/aws-lambda-event-sources';
-import * as sqs from '@aws-cdk/aws-sqs';
-import { Construct, Duration } from '@aws-cdk/core';
+import { Construct, Duration } from 'monocdk';
+import * as iam from 'monocdk/aws-iam';
+import * as lambda from 'monocdk/aws-lambda';
+import * as sources from 'monocdk/aws-lambda-event-sources';
+import * as sqs from 'monocdk/aws-sqs';
 
 export interface FanOutToLambdasViaQueueProps {
   readonly workerFunctionProps: lambda.FunctionProps;

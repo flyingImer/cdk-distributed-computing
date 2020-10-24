@@ -1,7 +1,7 @@
-import { Stack, Construct, StackProps, App, RemovalPolicy, CfnOutput, Duration } from '@aws-cdk/core';
+import { Stack, Construct, StackProps, App, RemovalPolicy, CfnOutput, Duration } from 'monocdk';
 import { FanOutToLambdasViaQueue } from '../src';
-import * as ddb from '@aws-cdk/aws-dynamodb';
-import * as lambda from '@aws-cdk/aws-lambda';
+import * as ddb from 'monocdk/aws-dynamodb';
+import * as lambda from 'monocdk/aws-lambda';
 import * as path from 'path';
 
 class TestStack extends Stack {
