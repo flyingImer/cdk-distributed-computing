@@ -7,7 +7,7 @@ const project = new AwsCdkConstructLibrary({
   stability: Stability.Experimental,
 
   authorName: 'Ej Wang',
-  authorEmail: 'ej.wang.dev@gmail.com',
+  authorEmail: 'ej.wang.devs@gmail.com',
   repository: 'https://github.com/flyingImer/cdk-distributed-computing.git',
 
   catalog: {
