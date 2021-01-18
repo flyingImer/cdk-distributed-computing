@@ -14,6 +14,8 @@ const project = new AwsCdkConstructLibrary({
     announce: false,
   },
 
+  codeCov: true,
+
   compat: true,
   projenUpgradeSecret: 'PROJEN_UPGRADE_TOKEN',
 
@@ -24,12 +26,12 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-lambda',
     '@aws-cdk/aws-lambda-event-sources',
     '@aws-cdk/aws-sqs',
-    "@aws-cdk/core"
+    '@aws-cdk/core',
   ],
 
   devDependencies: {
-    'aws-sdk': Semver.caret('2.708.0')
-  }
+    'aws-sdk': Semver.caret('2.708.0'),
+  },
 });
 
 project.gitignore.exclude('.env');
