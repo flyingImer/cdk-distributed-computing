@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.29](https://github.com/flyingImer/cdk-distributed-computing/compare/v0.6.28...v0.6.29) (2021-01-18)
+
+
+### Features
+
+* enable CodeCov ([9c80b08](https://github.com/flyingImer/cdk-distributed-computing/commit/9c80b083960112b920cbf2e0deab7bc899a328fb))
+
+
+### Bug Fixes
+
+* no new line at the end of file ([ada5e7e](https://github.com/flyingImer/cdk-distributed-computing/commit/ada5e7ed672589bda50cdbca0e337428f63c8d51))
+* remove newline at the end of file ([912717d](https://github.com/flyingImer/cdk-distributed-computing/commit/912717ddfd9427bbe3ea085b06f130515b5543de))
+
 ### 0.6.28 (2020-11-10)
 
 ### 0.6.27 (2020-11-09)
