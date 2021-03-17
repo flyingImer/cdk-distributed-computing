@@ -3,14 +3,14 @@
 
 
 "@aws-cdk/assert@^1.32.2":
-  version "1.85.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-1.85.0.tgz#f6b55102a6c593e0db9c46e5599def5598e9e767"
-  integrity sha512-4d+zLeRPd9g0lLSWFIREjQfssfwExe9oUU6pPLd+oExj7be/5/lP8RhOJswA5Dw+v3ncoBx5C4EI1Uee1vI+Ww==
+  version "1.94.1"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-1.94.1.tgz#ea277750481ec90b6fba2961574a077dae939963"
+  integrity sha512-K7LlT3LF79e5FWQbNUS+AvlaW4cNuMt3641gYcV30e9uTgaXwJpvW0u6lK9L9deM/aoUT/01/afRE4QOzab/uQ==
   dependencies:
-    "@aws-cdk/cloud-assembly-schema" "1.85.0"
-    "@aws-cdk/cloudformation-diff" "1.85.0"
-    "@aws-cdk/core" "1.85.0"
-    "@aws-cdk/cx-api" "1.85.0"
+    "@aws-cdk/cloud-assembly-schema" "1.94.1"
+    "@aws-cdk/cloudformation-diff" "1.94.1"
+    "@aws-cdk/core" "1.94.1"
+    "@aws-cdk/cx-api" "1.94.1"
     constructs "^3.2.0"
 
 "@aws-cdk/assets@1.85.0":
@@ -378,10 +378,10 @@
     "@aws-cdk/core" "1.85.0"
     constructs "^3.2.0"
 
-"@aws-cdk/cfnspec@1.85.0":
-  version "1.85.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.85.0.tgz#1ed696d8d48ab77f7b0d936a765c578192cd3099"
-  integrity sha512-qqFk1mWVeFp+X+jlPbhmuEovfkaNe2PNSgGi/aosR/fJzJAeSHDZpwAkCSyb7c9TaMhAYVOQMgoOIQW0YHBg4g==
+"@aws-cdk/cfnspec@1.94.1":
+  version "1.94.1"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-1.94.1.tgz#ab39aef487cceef7b0aebb93acc2939c0aa91a20"
+  integrity sha512-7YUWOJsfXj2zHQp04o8ibz3PidGpNLZ449ye3gxc3HvalRdANwVzqunp6wdDUZwXa0539fuA54D83Kpq8ganDA==
   dependencies:
     md5 "^2.3.0"
 
@@ -393,19 +393,27 @@
     jsonschema "^1.4.0"
     semver "^7.3.2"
 
-"@aws-cdk/cloudformation-diff@1.85.0":
-  version "1.85.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cloudformation-diff/-/cloudformation-diff-1.85.0.tgz#651a05f1d4fe51753bfe1a7f51be8861ac05389c"
-  integrity sha512-NbRQ8Ge8sZswSehfCGbN8WM9C1PR8jfNXvb2p7hgl9TEhvDi8VY+9jlkeKYgvI18wwt6iTFR2rPo0bd/2L3W5Q==
+"@aws-cdk/cloud-assembly-schema@1.94.1":
+  version "1.94.1"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-1.94.1.tgz#04d6b69f6b9c82f4b23d423273e65694275572e8"
+  integrity sha512-Cp1O8JQBcJl6uqdRSIagqvCrRdnvUu18G7T4daMbIP9zLPimXHlIwEOxg3um/ivV/bCO4JdJwWnyi15MjbqF+Q==
   dependencies:
-    "@aws-cdk/cfnspec" "1.85.0"
+    jsonschema "^1.4.0"
+    semver "^7.3.4"
+
+"@aws-cdk/cloudformation-diff@1.94.1":
+  version "1.94.1"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cloudformation-diff/-/cloudformation-diff-1.94.1.tgz#61019836a60c81ddb181425bda171f62cf9ca4b1"
+  integrity sha512-68ZmKH6HOZKklfplMTHZPSKIL5yWl73ekykKHJpwjXXb3jGCp9htaAItO51koTOz8V4iul2VtARcPy/aID/h9Q==
+  dependencies:
+    "@aws-cdk/cfnspec" "1.94.1"
     colors "^1.4.0"
     diff "^5.0.0"
     fast-deep-equal "^3.1.3"
-    string-width "^4.2.0"
+    string-width "^4.2.2"
     table "^6.0.7"
 
-"@aws-cdk/core@1.85.0", "@aws-cdk/core@^1.32.2":
+"@aws-cdk/core@1.85.0":
   version "1.85.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.85.0.tgz#22fe776c51ff637ce909a933fa7c2d16e6384b68"
   integrity sha512-L8fiMg4Dpe8qhV+dClBSQldLt0LBEyz7EOigL3YEi+yMxQ2dBZAeryroh609Cnn/WlzNPob795FWmvMqTbrdAw==
@@ -416,6 +424,20 @@
     "@balena/dockerignore" "^1.0.2"
     constructs "^3.2.0"
     fs-extra "^9.0.1"
+    ignore "^5.1.8"
+    minimatch "^3.0.4"
+
+"@aws-cdk/core@1.94.1", "@aws-cdk/core@^1.32.2":
+  version "1.94.1"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.94.1.tgz#d11d91c042c015ee94ef56eafb6e5f26494c7345"
+  integrity sha512-wMbiPFnAEGNd3CInGiS1qr3/8w356g3NleiKCD1NI2RdIdXUD9Dba5DhtuGJYXGLsysrvwRiEqux2LrH/2A2JQ==
+  dependencies:
+    "@aws-cdk/cloud-assembly-schema" "1.94.1"
+    "@aws-cdk/cx-api" "1.94.1"
+    "@aws-cdk/region-info" "1.94.1"
+    "@balena/dockerignore" "^1.0.2"
+    constructs "^3.2.0"
+    fs-extra "^9.1.0"
     ignore "^5.1.8"
     minimatch "^3.0.4"
 
@@ -441,10 +463,23 @@
     "@aws-cdk/cloud-assembly-schema" "1.85.0"
     semver "^7.3.2"
 
+"@aws-cdk/cx-api@1.94.1":
+  version "1.94.1"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cx-api/-/cx-api-1.94.1.tgz#1d622dd26868935a366a779823b1c60982f4b39e"
+  integrity sha512-ME6A7dsHbyZv859jhmUhGv9D9soShS0Jafruad87iphBuujfaxruG3aHc8UGIDV6opaW8euVLrEVNZ3H0cMM/w==
+  dependencies:
+    "@aws-cdk/cloud-assembly-schema" "1.94.1"
+    semver "^7.3.4"
+
 "@aws-cdk/region-info@1.85.0":
   version "1.85.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/region-info/-/region-info-1.85.0.tgz#59d5ff0475af5ae17335d849025ffdd1c8d8b661"
   integrity sha512-7GPJOcuORLkHniFrqsoB0YiMKlDGVUPAH5ZzidLSEnQqgnf67d9ZHFqarj8GEr4ZuV/lgAavUK5T/CxEqLfLcw==
+
+"@aws-cdk/region-info@1.94.1":
+  version "1.94.1"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/region-info/-/region-info-1.94.1.tgz#d142a87be0d84ad4824f3191cd5359fb6f7d79fe"
+  integrity sha512-FcflZlta6SqlebWT0Dhwo3FLTblbsUSh7T1J5uRG0BINw2EwunaQr/isl23M1qQoaASsnY1TIbMt+WYYsWbuNQ==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.11":
   version "7.12.11"
@@ -2885,6 +2920,16 @@ fs-extra@^9.0.1:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
     universalify "^1.0.0"
+
+fs-extra@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
+  integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
+  dependencies:
+    at-least-node "^1.0.0"
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -5940,6 +5985,15 @@ string-width@^4.1.0, string-width@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.0.tgz#952182c46cc7b2c313d1596e623992bd163b72b5"
   integrity sha512-zUz5JD+tgqtuDjMhwIg5uFVV3dtqZ9yQJlZVfq4I01/K5Paj5UHj7VyrQOJvzawSVlKpObApbfD0Ed6yJc+1eg==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.0"
+
+string-width@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.2.tgz#dafd4f9559a7585cfba529c6a0a4f73488ebd4c5"
+  integrity sha512-XBJbT3N4JhVumXE0eoLU9DCjcaF92KLNqTmFCnG1pf8duUxFGwtP6AD6nkjw9a3IdiRtL3E2w3JDiE/xi3vOeA==
   dependencies:
     emoji-regex "^8.0.0"
     is-fullwidth-code-point "^3.0.0"
